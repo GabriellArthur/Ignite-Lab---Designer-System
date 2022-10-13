@@ -14,5 +14,11 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
+  },
+  viteFinal: async (config, { configType }) => {
+    if(configType === 'PRODUCTION') {
+      config.base = '/Ignite-Lab---Designer-System/';
+    }
+    return config
   }
 }
